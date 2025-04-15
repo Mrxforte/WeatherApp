@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#29233C"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.DetailsScreen">
+
+<!--    Top Header -->
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="34sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/montreal"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/cityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_19_mostly_clear"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cityName" />
+    <!--    Top Header -->
+
+<!--    Content Section -->
+<!--    this is main content bg-->
+    <View
+        android:id="@+id/mainBg"
+        android:background="#402867"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/cityInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </View>
+
+<!--    Inside of the content section -->
+<!--    Content Section -->
+</androidx.constraintlayout.widget.ConstraintLayout>

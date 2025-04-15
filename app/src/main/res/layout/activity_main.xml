@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/img"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Current weather information section -->
+    <LinearLayout
+        android:id="@+id/currentWeatherInfo"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/montreal"
+            android:textColor="#fff"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_19"
+            android:textColor="#fff"
+            android:textSize="96sp" />
+
+        <TextView
+            android:id="@+id/weatherDegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostly Clear"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="45dp"
+                android:text="H:24°"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L:18°"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--    Current weather information section -->
+
+    <!--    Custom bottom appbar-->
+
+
+    <!--    Plus icon using the text view-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/plus_icon"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/fab2"
+        app:layout_constraintLeft_toLeftOf="@id/fab2"
+        app:layout_constraintRight_toRightOf="@id/fab2"
+        app:layout_constraintTop_toTopOf="@id/fab2" />
+
+    <ImageButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/fab_center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--    Plus icon using the text view-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="240dp"
+            android:src="@drawable/left_menu" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_menu" />
+
+    </LinearLayout>
+
+
+    <!--    cloudy background -->
+    <!--    cloud 1-->
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="97dp"
+        android:contentDescription="@string/img"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintBottom_toTopOf="@id/currentWeatherInfo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <!--    cloud 2-->
+    <!--    cloud 3-->
+
+    <ImageView
+        android:layout_width="126dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="-49dp"
+        android:layout_marginBottom="90dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintBottom_toBottomOf="@id/currentWeatherInfo"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <!--    cloud 4-->
+    <!--    cloud 4-->
+    <!-- cloud 5-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="-16dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintBottom_toBottomOf="@id/currentWeatherInfo"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:layout_width="190dp"
+        android:scaleType="centerCrop"
+        android:layout_height="86dp"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
+
+    <!--    cloud 4-->
+    <!--    cloud 6-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="158dp"
+        android:layout_height="74dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintLeft_toLeftOf="@id/currentWeatherInfo"
+        app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="158dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="-37dp"
+        android:contentDescription="@string/img"
+        android:src="@drawable/cloaud1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
+    <!--    cloudy background -->
+</androidx.constraintlayout.widget.ConstraintLayout>

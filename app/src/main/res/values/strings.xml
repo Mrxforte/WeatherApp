@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="img">img</string>
+    <string name="montreal">Montreal</string>
+    <string name="_19">19°</string>
+    <string name="_19_mostly_clear">19° | Mostly Clear</string>
+</resources>
