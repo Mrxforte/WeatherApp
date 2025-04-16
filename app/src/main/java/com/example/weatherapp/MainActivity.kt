@@ -100,6 +100,10 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+        binding.currentWeatherInfo.setOnClickListener(){
+            var intent = Intent(this, DetailsScreen::class.java)
+            startActivity(intent)
+        }
         var adapter = WeatherInfoAdapter(list)
         var layoutManager1 = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rv.adapter = adapter
