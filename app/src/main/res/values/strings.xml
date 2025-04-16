@@ -4,4 +4,7 @@
     <string name="montreal">Montreal</string>
     <string name="_19">19°</string>
     <string name="_19_mostly_clear">19° | Mostly Clear</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="weekly_forecast">Weekly Forecast</string>
+    <string name="_12_am">12 AM</string>
 </resources>

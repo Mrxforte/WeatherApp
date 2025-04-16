@@ -60,11 +60,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="45dp"
                 android:text="H:24°"
+                android:layout_marginEnd="10dp"
                 android:textColor="#fff"
                 android:textSize="20sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,9 +78,59 @@
 
     <!--    Custom bottom appbar-->
 
+    <!--    Custom Bottomsheet-->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:translationZ="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/bg3"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/hourly_forecast"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        <ImageView
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:src="@drawable/liner"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/hourly_forecast"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
 
     <!--    Plus icon using the text view-->
     <ImageView
+        android:translationZ="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -93,47 +142,6 @@
         app:layout_constraintRight_toRightOf="@id/fab2"
         app:layout_constraintTop_toTopOf="@id/fab2" />
 
-    <ImageButton
-        android:id="@+id/fab2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="80dp"
-        android:layout_marginBottom="6dp"
-        android:background="@drawable/fab_center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <!--    Plus icon using the text view-->
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bottom_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="240dp"
-            android:src="@drawable/left_menu" />
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/right_menu" />
-
-    </LinearLayout>
 
 
     <!--    cloudy background -->
@@ -175,11 +183,11 @@
 
     <ImageView
         android:layout_width="190dp"
-        android:scaleType="centerCrop"
         android:layout_height="86dp"
         android:layout_marginStart="-60dp"
         android:layout_marginTop="44dp"
         android:contentDescription="@string/img"
+        android:scaleType="centerCrop"
         android:src="@drawable/cloaud1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
@@ -187,25 +195,76 @@
     <!--    cloud 4-->
     <!--    cloud 6-->
     <ImageView
-        android:scaleType="centerCrop"
         android:layout_width="158dp"
         android:layout_height="74dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/img"
+        android:scaleType="centerCrop"
         android:src="@drawable/cloaud1"
         app:layout_constraintLeft_toLeftOf="@id/currentWeatherInfo"
         app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
 
     <ImageView
-        android:scaleType="centerCrop"
         android:layout_width="158dp"
         android:layout_height="74dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="-37dp"
         android:contentDescription="@string/img"
+        android:scaleType="centerCrop"
         android:src="@drawable/cloaud1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/currentWeatherInfo" />
     <!--    cloudy background -->
+
+
+
+
+
+    <ImageButton
+        android:translationZ="1dp"
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/fab_center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--    Plus icon using the text view-->
+
+    <ImageView
+        android:translationZ="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:translationZ="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/leftMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="240dp"
+            android:src="@drawable/left_menu" />
+
+
+        <ImageView
+            android:id="@+id/rightMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_menu" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
